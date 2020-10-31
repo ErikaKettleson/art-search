@@ -10,6 +10,7 @@ import {
   SearchBox,
   RefinementList,
   Pagination,
+  RangeInput
 } from 'react-instantsearch-dom';
 
 
@@ -30,6 +31,7 @@ function App() {
         <InstantSearch 
           searchClient={searchClient} 
           indexName="Art"
+          className="search-box"
         >
           <Facets/>
           <div className="search-panel__results">
@@ -56,16 +58,18 @@ function App() {
 
 
 const Hit = hit => {
-  const { Artist, Date, Title, ArtistBio, Nationality, Medium, ThumbnailURL } = hit.hit;
+  const { Artist, Date, Title, ArtistBio, Medium, ThumbnailURL,  } = hit.hit;
 
   return (
     <div className="hit-media">
       <div className="hit-body">
         <img src={ThumbnailURL} />
-        <p className="title">{Title}</p>
-        <p className="artist">{Artist}</p>
-        <p className="date">{Date}</p>
-        <p className="artist-bio">{ArtistBio}</p>
+        <div className="object-info">
+          <p className="title">{Title}</p>
+          <p className="date">{Date}</p>
+          <p className="artist">{Artist} {ArtistBio}</p>
+          <p className="medium"> {Medium}</p>
+        </div>
       </div>
   </div>
   )
@@ -81,7 +85,7 @@ const Facets = () => {
     <RefinementList className="search-panel__filters" attribute="Date" />
     <p>Nationality</p>
     <RefinementList className="search-panel__filters" attribute="Nationality" />
-
+    <RangeInput attribute="Date" />
   </div>
   )
 }

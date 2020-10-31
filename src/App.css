@@ -26,9 +26,61 @@
 .facet-results {
   display: flex;
   flex-direction: row;
-
 }
 
 .search-panel {
   min-width: 18vw;
 }
+
+.searchbox {
+  margin: 2vh 0;
+}
+
+.ais-SearchBox-input {
+  height: 2.5em;
+}
+
+.object-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font: #282c34; 
+
+}
+
+
+.title {
+  margin: 0;
+  font-size: 1.3em;
+  padding: .5em 0;
+}
+
+.date {
+  margin: 0;
+  font-size: 1.1em;
+  padding-bottom: .5em;
+}
+
+.artist {
+  margin: 0;
+}
+
+.medium {
+  margin: 0;
+  color: grey;
+}
+
+
+
+/* <div className="hit-media">
+<div className="hit-body">
+  <img src={ThumbnailURL} />
+  <div className="object-info">
+    <p className="title">{Title}</p>
+    <p className="date">{Date}</p>
+    <p className="artist">{Artist}</p>
+    <p className="artist-bio">{ArtistBio}</p>
+    <p className="medium"> {Medium}</p>
+  </div>
+</div>
+</div> */
