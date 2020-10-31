@@ -10,7 +10,6 @@ import {
   SearchBox,
   RefinementList,
   Pagination,
-  Configure,
 } from 'react-instantsearch-dom';
 
 
@@ -22,31 +21,31 @@ const searchClient = algoliasearch(
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="art-header">
         <p>
           Search through the collections of the Harvard Art Museums.
         </p>
       </header>
-      <div className="container">
+      <div className="facet-results">
         <InstantSearch 
           searchClient={searchClient} 
           indexName="Art"
         >
-          <div className="search-panel">
-            <div className="search-panel__results">
-              <SearchBox
-                className="searchbox"
-                autoFocus="true"
-                translations={{
-                  placeholder: '',
-                }}
-              />
-              <div id="hits">
-                <Hits hitComponent={Hit} />
-              </div>
-              <div className="pagination">
-                <Pagination />
-              </div>
+          <Facets/>
+          <div className="search-panel__results">
+            <SearchBox
+              className="searchbox"
+              autoFocus="true"
+              translations={{
+                placeholder: '',
+              }}
+            />
+            
+            <div id="hits">
+              <Hits hitComponent={Hit} />
+            </div>
+            <div className="pagination">
+              <Pagination />
             </div>
           </div>
         </InstantSearch>
@@ -72,6 +71,20 @@ const Hit = hit => {
   )
 }
 
+
+const Facets = () => {
+  return (
+  <div className="search-panel">
+    <p>Artist</p>
+    <RefinementList className="search-panel__filters" attribute="Artist" />
+    <p>Date</p>
+    <RefinementList className="search-panel__filters" attribute="Date" />
+    <p>Nationality</p>
+    <RefinementList className="search-panel__filters" attribute="Nationality" />
+
+  </div>
+  )
+}
 
 
 
