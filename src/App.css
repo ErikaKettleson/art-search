@@ -21,15 +21,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Times New Roman";
+  letter-spacing: 5px;  
 }
 
 .facet-results {
   display: flex;
   flex-direction: row;
+  margin-right: 1em;
 }
 
 .search-panel {
   min-width: 18vw;
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 1.25em;
 }
 
 .searchbox {
@@ -70,17 +76,3 @@
   color: grey;
 }
 
-
-
-/* <div className="hit-media">
-<div className="hit-body">
-  <img src={ThumbnailURL} />
-  <div className="object-info">
-    <p className="title">{Title}</p>
-    <p className="date">{Date}</p>
-    <p className="artist">{Artist}</p>
-    <p className="artist-bio">{ArtistBio}</p>
-    <p className="medium"> {Medium}</p>
-  </div>
-</div>
-</div> */

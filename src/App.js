@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import 'instantsearch.css/themes/reset.css';
 import 'instantsearch.css/themes/algolia.css';
-
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
@@ -10,7 +8,7 @@ import {
   SearchBox,
   RefinementList,
   Pagination,
-  RangeInput
+  ClearRefinements,
 } from 'react-instantsearch-dom';
 
 
@@ -37,12 +35,11 @@ function App() {
           <div className="search-panel__results">
             <SearchBox
               className="searchbox"
-              autoFocus="true"
+              autoFocus={true}
               translations={{
                 placeholder: '',
               }}
             />
-            
             <div id="hits">
               <Hits hitComponent={Hit} />
             </div>
@@ -75,22 +72,31 @@ const Hit = hit => {
   )
 }
 
-
 const Facets = () => {
   return (
   <div className="search-panel">
+    <ClearRefinements />
     <p>Artist</p>
-    <RefinementList className="search-panel__filters" attribute="Artist" />
-    <p>Date</p>
-    <RefinementList className="search-panel__filters" attribute="Date" />
+    <RefinementList 
+      className="search-panel__filters" 
+      attribute="Artist" 
+      showMore={true}
+    />
     <p>Nationality</p>
-    <RefinementList className="search-panel__filters" attribute="Nationality" />
-    <RangeInput attribute="Date" />
+    <RefinementList 
+      className="search-panel__filters" 
+      attribute="Nationality" 
+      showMore={true}
+    />
+    <p>Medium</p>
+    <RefinementList 
+      className="search-panel__filters" 
+      attribute="Medium" 
+      showMore={true}
+    />
   </div>
   )
 }
-
-
 
 
 export default App;
