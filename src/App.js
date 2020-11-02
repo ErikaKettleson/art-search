@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <header className="art-header">
         <p>
-          Search through the collections of the Harvard Art Museums.
+          Search through the collections of the Museum of Modern Art.
         </p>
       </header>
       <div className="facet-results">
@@ -55,12 +55,14 @@ function App() {
 
 
 const Hit = hit => {
-  const { Artist, Date, Title, ArtistBio, Medium, ThumbnailURL,  } = hit.hit;
+  const { Artist, Date, Title, ArtistBio, Medium, ThumbnailURL, URL } = hit.hit;
 
   return (
     <div className="hit-media">
       <div className="hit-body">
-        <img src={ThumbnailURL} />
+        <a href={URL} target="_blank">
+          <img src={ThumbnailURL} />
+        </a>
         <div className="object-info">
           <p className="title">{Title}</p>
           <p className="date">{Date}</p>
