@@ -1,27 +1,33 @@
-Question 1: Hello,
+## Question 1:
+
+<p><em>
+Hello,
 I'm new to search engines, and there are a lot of concepts I'm not educated on. To make my onboarding smoother, it'd help if you could provide me with some definitions of the following concepts:
 Records
 Indexing
 I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
-Cheers, George
+Cheers, George  
+</em></p>
+
 
 Hi George,
 
 Records refer to objects in your index. They are the individual units of information you want to search for and they can have any number of attributes.
 
 Here are two examples:
-{
+
+`{
 “name”:  “George”,
 “questions”: [“records”, “indexing”, “custom ranking”] 
-}
+}`
 
-{
+`{
   "name": "Iphone 6 64Gb",
   "brand": "Apple",
   "color": "Gold",
   "categories": ["smartphone", "phone", "electronics"],
   "price": 789
-}
+}`
 
 https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/in-depth/what-is-in-a-record/
 
@@ -35,9 +41,13 @@ https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/
 
 Best, Erika
 
-Question 2: Hello,
+## Question 2: 
+
+<p><em>
+Hello,
 Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design. Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient.
-Regards, Matt
+Regards, Matt  
+</em></p>
 
 Hi Matt, 
 
@@ -52,12 +62,15 @@ https://www.algolia.com/doc/api-reference/api-methods/clear-objects/
 
 Best, Erika
 
+## Question 3: 
 
-
-Question 3: Hi,
+<p><em>
+Hi,
 I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
-Regards, Leo
- 
+Regards, Leo  
+</em></p>
+
+<p>
 Hi Leo, 
  
 On a very high level, you’ll need to send Algolia your data, choose how you want to sort and filter it, and build the search UI on your website. 
@@ -81,4 +94,5 @@ https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/
  
 Finally, our documentation can be found at https://www.algolia.com/doc/. 
 
-Thanks, Erika
+Best, Erika
+</p>
