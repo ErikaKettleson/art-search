@@ -96,6 +96,12 @@ const Facets = () => {
       attribute="Medium" 
       showMore={true}
     />
+    <p>Date</p>
+    <RefinementList 
+      className="search-panel__filters" 
+      attribute="Date" 
+      showMore={true}
+    />
   </div>
   )
 }
