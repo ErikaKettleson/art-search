@@ -1,70 +1,14 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Friendly Art Search
+Search & discovery with the MoMA art archives
 
-## Available Scripts
+## Context
+I wanted to make an art search app that didn’t overwhelm the user. My dataset comes from the collections of the Museum of Modern Art, a large and diverse set of 135K works spanning across artists, nationalities, periods and places. Often, art searches can be intimidating, offering a blank search box without suggestion and returning a ton of information of limited relevance. Results can be slow, hard to sort or filter and don’t always cater to a non-academic searcher. 
 
-In the project directory, you can run:
+## Project  
+My goal was to build an app that served as a tool for art search and discovery for the casual user. My UX prioritizes the visual, offers simple filters and clean, legible results.  I chose to focus on the most relevant attributes of an artwork: title, artist, nationality, date and medium. If users want more information, all works link to detailed references. 
 
-### `npm start`
+I used React for the app and the React InstantSearch library to build a series of components to search, filter and display results. I used Custom Ranking to prioritize works with images over those without, and newer works over older. I used the InstantSearch Refinement List widget as a sidebar to filter by artist, nationality and medium because I wanted to offer the user suggestions. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Feedback
+As for Algolia feedback, the one big issue I ran into in development was searching items inside a RefinementList component. I was attempting to add searching within my artist facet, using the example from the docs (https://www.algolia.com/doc/api-reference/widgets/refinement-list/react/#full-example). I wish there were more examples of this functionality. A bit of general UX feedback was with the report links. I clicked on these expecting they would be tooltips so many times while I was digging through documentation. I never expected to be auto-scrolled to a feedback form. 
