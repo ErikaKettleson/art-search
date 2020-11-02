@@ -33,6 +33,7 @@
 
 .search-panel {
   min-width: 18vw;
+  max-width: 18vw;
   margin-left: 1em;
   margin-top: 1em;
   font-size: 1.25em;
